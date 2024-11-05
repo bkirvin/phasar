@@ -1,6 +1,6 @@
 {
   "name": "quasar-phaser",
-  "version": "0.0.2",
+  "version": "5.0.0",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "Bryan Irvin <bkirvin@gmail.com>",
@@ -34,7 +34,14 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.0.0",
     "postcss": "^8.4.14",
-    "vite-plugin-checker": "^0.7.1"
+    "vite-plugin-checker": "^0.7.1",
+    "workbox-build": "7.0.x",
+    "workbox-cacheable-response": "7.0.x",
+    "workbox-core": "7.0.x",
+    "workbox-expiration": "7.0.x",
+    "workbox-precaching": "7.0.x",
+    "workbox-routing": "7.0.x",
+    "workbox-strategies": "7.0.x"
   },
   "engines": {
     "node": "^20 || ^18 || ^16",
