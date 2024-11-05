@@ -9,7 +9,11 @@
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "build": "npm run patch && quasar build",
+    "build:pwa": "npm run patch && quasar build -m pwa"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
