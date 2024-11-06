@@ -1,15 +1,23 @@
 <template>
   <router-view />
+  <div class="version">
+    <small>{{  version  }}</small>
+  </div>
 </template>
 
 <script setup>
+import { version } from '../package.json'
 defineOptions({
   name: 'App'
 })
 </script>
 
 <style lang="scss">
-body {
-  user-select: none;
+.version {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #555;
+  padding: 5px;
 }
 </style>
