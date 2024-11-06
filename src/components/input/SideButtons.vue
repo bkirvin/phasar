@@ -3,13 +3,13 @@
     class="side-buttons">
     <div
       class="left"
-      @touchstart="leftDown"
-      @touchend="leftUp">
+      @touchstart.prevent="leftDown"
+      @touchend.prevent="leftUp">
     </div>
     <div
       class="right"
-      @touchstart="rightDown"
-      @touchend="rightUp">
+      @touchstart.prevent="rightDown"
+      @touchend.prevent="rightUp">
     </div>
   </div>
 </template>
@@ -63,12 +63,6 @@ export default {
 
 <style lang="scss" scoped>
 .side-buttons {
-  -webkit-touch-callout: none;
-  -webkit-user-callout: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-modify: none;
-  -webkit-highlight: none;
   user-select: none;
 }
 input,

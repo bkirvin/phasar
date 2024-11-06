@@ -6,7 +6,30 @@
 </template>
 
 <script setup>
+// import { onMounted } from 'vue'
 import { version } from '../package.json'
+
+// function createDoubleTapPreventer (timeoutMs) {
+//   let dblTapTimer = 0
+//   let dblTapPressed = false
+
+//   return function (e) {
+//     clearTimeout(dblTapTimer)
+//     if (dblTapPressed) {
+//       e.preventDefault()
+//       dblTapPressed = false
+//     } else {
+//       dblTapPressed = true
+//       dblTapTimer = setTimeout(() => {
+//         dblTapPressed = false
+//       }, timeoutMs)
+//     }
+//   }
+// }
+
+// onMounted(() => {
+//   document.body.addEventListener('touchstart', createDoubleTapPreventer(500), { passive: false })
+// })
 defineOptions({
   name: 'App'
 })
@@ -14,12 +37,6 @@ defineOptions({
 
 <style lang="scss">
 body {
-  -webkit-touch-callout: none;
-  -webkit-user-callout: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-modify: none;
-  -webkit-highlight: none;
   user-select: none;
 }
 .version {
