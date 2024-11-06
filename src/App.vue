@@ -20,7 +20,7 @@ body {
 .version {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 5vw;
   color: #555;
   padding: 5px;
 }
