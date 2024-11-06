@@ -13,6 +13,10 @@ defineOptions({
 </script>
 
 <style lang="scss">
+body {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
 .version {
   position: absolute;
   bottom: 0;
