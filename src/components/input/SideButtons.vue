@@ -64,7 +64,12 @@ export default {
 <style lang="scss" scoped>
 .side-buttons {
   -webkit-touch-callout: none;
- user-select: none;
+  -webkit-user-callout: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-modify: none;
+  -webkit-highlight: none;
+  user-select: none;
 }
 input,
 .left,
