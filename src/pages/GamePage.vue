@@ -20,14 +20,6 @@ const phaserRef = ref()
 
 // }
 
-const moveSprite = (sprite, vel) => {
-  const scene = toRaw(phaserRef.value.scene)
-
-  if (scene) {
-    scene[sprite].data.values.move = vel
-  }
-}
-
 // const addSprite = () => {
 //   const scene = toRaw(phaserRef.value.scene)
 
@@ -54,6 +46,14 @@ const moveSprite = (sprite, vel) => {
 
 // END SCENE ACCESS FUNCTION EXAMPLES
 
+const moveSprite = (sprite, vel) => {
+  const scene = toRaw(phaserRef.value.scene)
+
+  if (scene) {
+    scene[sprite].data.values.move = vel
+  }
+}
+
 const currentScene = (scene) => {
   // configure scene
   console.log('CURRENT SCENE', scene)
@@ -61,7 +61,6 @@ const currentScene = (scene) => {
 const leftDown = () => {
   moveSprite('paddle', -10)
 }
-
 const leftUp = () => {
   moveSprite('paddle', 0)
 }
