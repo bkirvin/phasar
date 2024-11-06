@@ -63,6 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 .side-buttons {
+  -webkit-touch-callout: none;
  user-select: none;
 }
 input,
