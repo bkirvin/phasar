@@ -26,6 +26,7 @@ export default {
   ],
   setup (props, { emit }) {
     function leftDown (e) {
+      console.log('side buttons leftdown')
       emit('leftdown', {
         detail: {
           x: e.targetTouches[0].screenX,

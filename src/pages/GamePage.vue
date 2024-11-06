@@ -4,7 +4,7 @@ import GameInstaller from 'src/components/GameInstaller.vue'
 import SideButtons from 'src/components/input/SideButtons.vue'
 import GameScore from 'src/components/GameScore.vue'
 import GameChip from 'src/components/GameChip.vue'
-import { ref /*, toRaw */ } from 'vue'
+import { ref, toRaw } from 'vue'
 
 const phaserRef = ref()
 
@@ -20,16 +20,13 @@ const phaserRef = ref()
 
 // }
 
-// const moveSprite = () => {
-//   const scene = toRaw(phaserRef.value.scene)
+const moveSprite = (sprite, vel) => {
+  const scene = toRaw(phaserRef.value.scene)
 
-//   if (scene) {
-//     //  Call the `moveLogo` method in the `MainMenu` Scene and capture the sprite position
-//     scene.moveLogo(({ x, y }) => {
-//     spritePosition.value = { x, y }
-//     })
-//   }
-// }
+  if (scene) {
+    scene[sprite].data.values.move = vel
+  }
+}
 
 // const addSprite = () => {
 //   const scene = toRaw(phaserRef.value.scene)
@@ -61,6 +58,19 @@ const currentScene = (scene) => {
   // configure scene
   console.log('CURRENT SCENE', scene)
 }
+const leftDown = () => {
+  moveSprite('paddle', -10)
+}
+
+const leftUp = () => {
+  moveSprite('paddle', 0)
+}
+const rightDown = () => {
+  moveSprite('paddle', 10)
+}
+const rightUp = () => {
+  moveSprite('paddle', 0)
+}
 
 </script>
 
@@ -68,7 +78,7 @@ const currentScene = (scene) => {
   <game-score />
   <game-chip />
   <game-installer />
-  <side-buttons />
+  <side-buttons @leftdown="leftDown" @leftup="leftUp" @rightdown="rightDown" @rightup="rightUp" />
   <phaser-game  ref="phaserRef" @current-active-scene="currentScene"/>
 </template>
 

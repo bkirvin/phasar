@@ -1,5 +1,5 @@
 import { GameObjects } from 'phaser'
-import { EventBus } from 'src/game/EventBus'
+// import { EventBus } from 'src/game/EventBus'
 
 export default class Paddle extends GameObjects.Sprite {
   constructor (scene, x, y) {
@@ -14,20 +14,21 @@ export default class Paddle extends GameObjects.Sprite {
     scene.add.existing(this)
     // player input controls
     // touch
-    EventBus.on('leftdown', (e) => {
-      e.preventDefault()
-      this.data.values.move = -10
-    })
-    EventBus.on('leftup', (e) => {
-      this.data.values.move = 0
-    })
-    EventBus.on('rightdown', (e) => {
-      e.preventDefault()
-      this.data.values.move = 10
-    })
-    EventBus.on('rightup', (e) => {
-      this.data.values.move = 0
-    })
+    // EventBus.on('leftdown', (e) => {
+    //   console.log('paddle leftdown')
+    //   e.preventDefault()
+    //   this.data.values.move = -10
+    // })
+    // EventBus.on('leftup', (e) => {
+    //   this.data.values.move = 0
+    // })
+    // EventBus.on('rightdown', (e) => {
+    //   e.preventDefault()
+    //   this.data.values.move = 10
+    // })
+    // EventBus.on('rightup', (e) => {
+    //   this.data.values.move = 0
+    // })
     // keyboard
     scene.input.keyboard.on('keyup-LEFT', (e) => {
       this.data.values.move = 0
