@@ -57,6 +57,6 @@ export default {
   position: absolute;
   bottom: 5vh;
   right: 5vh;
-  z-index: 20
+  z-index: 2001
 }
 </style>
